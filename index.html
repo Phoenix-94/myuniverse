@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Message for Amrutha</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container, .flower-animation, .rain-animation, .goodbye-animation {
+            display: none;
+            position: absolute;
+            text-align: left;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            color: rgb(251, 246, 246);
+            max-width: 90%;
+            width: 100%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow-y: auto; /* Add vertical scrolling */
+            max-height: 80%; /* Limit the height to allow for scrolling */
+        }
+
+        .container {
+            background-image: url('a.jpg'); /* Add your background image here */
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .thank-you {
+            font-style: italic;
+            font-size: 1.2em;
+            margin-top: 30px;
+        }
+
+        .flower-animation img, .rain-animation img, .goodbye-animation img {
+            width: 100%;
+            height: auto;
+        }
+
+        .button-container {
+            margin-top: 20px;
+            text-align: center; /* Center the buttons */
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="flower-animation">
+        <img src="rain-animation.jpg" alt="Flower Animation">
+        <div class="button-container">
+            <button onclick="showRain()">Do you accept these flowers?</button>
+        </div>
+    </div>
+
+    <div class="rain-animation">
+        <img src="B.jpg" alt="Rain Animation">
+        <div class="button-container">
+            <button onclick="showMessage()">Hi Amrutha, I want to say something very important. Do you read it?</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>TO THE GIRL I love AND A REASON FOR GOODBYE</h1>
+        <p>Amrutha, read this, okay? It's something I want to say.</p>
+        <p>The boy who was once alone and lonely in his life, the same boy who was never interested in any girl, fell for one girl. Now, she has gone. She is with him, but she wants him as a friend.</p>
+        <p>He is alone again, but this time with memories.</p>
+        <p>He cries for her in his room and acts like he doesn't care at all in front of friends and everyone else.</p>
+        <p>His character: He thinks a lot, a bit of overthinking, okay?</p>
+        <p>He says: "I just want to feel loved, but I always end up making the worst decisions that can hurt someone. I hate myself."</p>
+        <p>Everyone thinks that I'm in a relationship, but I lost the person with whom I planned my whole future.</p>
+        <p>My brain says: "You gotta move on," but my heart says: "I want her to choose me."</p>
+        <p>She came into his dreams after several months, and the guilt of losing her hits him again in the middle of the night.</p>
+        <p>He looks at her and realizes that he'll never love anyone the way he loves her. In the meantime, he thinks, "I'll leave her alone so I don't bother her anymore." And after some time, the thoughts in his mind are:</p>
+        <p>"Is she okay? Is she safe? Does she need anything?"</p>
+        <p>After all this, he is with her. He loves her very much. She knows that, but she wants to be just friends.</p>
+        <p>She doesn't want a relationship with him, but his thinking is different. Even if she says friendship, he loves her. Whenever he listens to or sees her, whatever he does with her, he feels happy and loved by her.</p>
+        <p>But in the meantime, whenever he sees her go away and sees another guy talking with her, he gets angry, depressed, and all these feelings hit him.</p>
+        <p>So he realizes he's just a friend to her. He is over-possessive about her, thinks only about her. But also he wants to leave her because it hurts him so much that he can't tell anybody.</p>
+        <p>He likes that from his whole life, he doesn't share anything with anyone. He wants to leave her because he loves her and she thinks he is a friend. It will get complicated and build conflict between them, so he decided to leave her. It's really a good and best choice. If he's not present around her, it will be perfect, and she'll be very happy in her life. He respects her feelings because she never did anything wrong. She is the only person who got his attention and made him happy, but all he did was ruin her life.</p>
+        <p>So, for all these reasons, he wants to leave and has decided to say... GOODBYE.</p>
+        <p>He's stuck between "He really wants to talk to her," and "He really needs to get over her."</p>
+        <p>He just realized that he always ruins everything.</p>
+        <p>SORRY for everything I've done in your life. Please forgive me for everything.</p>
+        <p class="thank-you">GOODBYE AMRUTHA... AND THANK YOU.</p>
+        <div class="button-container">
+            <button onclick="showGoodbye()">End</button>
+        </div>
+    </div>
+
+    <div class="goodbye-animation">
+        <img src="image.jpg" alt="Goodbye Image">
+    </div>
+
+    <script>
+        function showRain() {
+            document.querySelector('.flower-animation').style.display = 'none';
+            document.querySelector('.rain-animation').style.display = 'flex';
+        }
+
+        function showMessage() {
+            document.querySelector('.rain-animation').style.display = 'none';
+            document.querySelector('.container').style.display = 'block';
+        }
+
+        function showGoodbye() {
+            document.querySelector('.container').style.display = 'none';
+            document.querySelector('.goodbye-animation').style.display = 'flex';
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector('.flower-animation').style.display = 'flex';
+        });
+    </script>
+</body>
+</html>

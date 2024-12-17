@@ -1,0 +1,46 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://source.unsplash.com/1600x900/?love'); /* Link to a random love-themed image from Unsplash */
+    background-size: cover; /* Make sure the image covers the entire background */
+    background-position: center; /* Center the image */
+    color: white;
+    padding: 20px;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background to make text more readable */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.thank-you {
+    font-style: italic;
+    font-size: 1.5em;
+    margin-top: 30px;
+}
